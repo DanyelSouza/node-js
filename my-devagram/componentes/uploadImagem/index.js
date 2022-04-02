@@ -25,7 +25,7 @@ export function UploadImagem({
 
     const aoAlterarImagem = () => {
 
-        console.log('aoAlterarImagem')
+        //console.log('aoAlterarImagem')
 
         if (!referenciaInput?.current?.files?.length) {
             return
@@ -45,7 +45,6 @@ export function UploadImagem({
     }
     return (
         <div className={`uploadImagemContainer ${className}`} onClick={abrirSeletorArquivos}>
-            <button>abrir seletor de arquivos</button>
             {imagemPreview && (
                 <div className="imagemPreviewContainer">
 

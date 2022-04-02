@@ -12,19 +12,21 @@ export default function Home() {
   const [imagem, setImagem] = useState(null)
   const referenciaInput = useRef(null)
 
-  console.log()
-
   return (
     <>
       <h1>Olá mundo</h1>
-      <button onClick={()=> referenciaInput?.current?.click()}>Abrir</button>
-      <UploadImagem setImagem={setImagem} imagemPreview={imagem?.preview} aoSetarAreferencia={(ref) => 
+      <button onClick={()=> referenciaInput?.current?.click()}>Abrir Seletor de arquivos</button>
       
-      referenciaInput.current = ref
+      <UploadImagem setImagem={setImagem}
+        imagemPreview={imagem?.preview} 
+       aoSetarAreferencia={(ref) => referenciaInput.current = ref}     
       
-      }/>
+      
+  />
       <Avatar />
-      <Botao texto={'Login'} cor='primaria' manipularClique={() => console.log('Botão clicado')} />
+      <Botao texto={'Login'} cor='primaria' manipularClique={() => console.log('Botão clicado')} 
+      
+      />
     </>
   )
 }
